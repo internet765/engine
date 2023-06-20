@@ -1,0 +1,168 @@
+@import '../../_variables.scss';
+@import '../../_mixins.scss';
+
+
+.root {
+  display: flex;
+  align-items: self-start;
+  flex-direction: column;
+
+  label {
+    display: inline-block;
+    @include text-small($color: $text_low_accent);
+    margin-bottom: 2px;
+    user-select: none;
+  }
+}
+.select {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  &Container {
+    position: relative;
+    cursor: pointer;
+
+    &:hover .selectButton {
+      border: 2px solid $el_accent_low;
+    }
+
+    &:hover .selectButtonRequired {
+      border: 2px solid $red_hover;
+    }
+
+    &:hover .selectControl {
+      background-color: $el_accent_low;
+    }
+
+    &:hover .selectControlRequired {
+        border: 2px solid $red_hover;
+    }
+
+    &:hover .selectOptions {
+      border: 2px solid $el_accent_low;
+    }
+
+    &:hover .selectOptionsRequired {
+      border: 2px solid $red_hover;
+    }
+
+    &Disabled {
+      & .selectButton {
+        cursor: initial;
+        border: 2px solid $el_accent_disabled;
+        color: $text_disabled;
+      }
+
+      & .selectControl {
+        background-color: $el_accent_disabled;
+        pointer-events: none;
+      }
+
+      &:hover .selectButton {
+        border: 2px solid $el_accent_disabled;
+      }
+
+      &:hover .selectControl {
+        cursor: initial;
+        background-color: $el_accent_disabled;
+      }
+    }
+
+  }
+
+  &Button {
+    display: flex;
+    align-items: center;
+    align-content: flex-start;
+    background-color: $bg_third_light;
+    border: 2px solid $el_accent_high;
+    @include text-regular($color: $text_high_accent);
+    border-radius: 4px;
+    height: 33px;
+    padding: 8px 10px;
+    cursor: pointer;
+    width: 100%;
+    user-select: none;
+
+    &Required {
+      border: 2px solid $red;
+    }
+
+    &:focus {
+      border: 2px solid $el_accent_low;
+      outline: none;
+    }
+    
+    &:focus + .selectControl{
+      background-color: $el_accent_low;
+    }
+
+  }
+
+  &Control {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 33px;
+    height: 33px;
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml, %3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath d='M5.41289 9.23408L9.01989 12.6179C9.56303 13.1274 10.4404 13.1274 10.9835 12.6179L14.5905 9.23408C15.4679 8.411 14.8412 7 13.6018 7H6.38776C5.14829 7 4.53552 8.411 5.41289 9.23408Z' fill='%23FFFFFF' /%3E%3C/svg%3E");
+    background-color: $el_accent_high;
+    background-position: center;
+    border-radius: 4px;
+    z-index: 20;
+    cursor: pointer;
+
+    &Active {
+      transform: rotate(180deg);
+    }
+
+    &Required {
+      border: 2px solid $red;
+    }
+  }
+
+  &Options {
+    position: absolute;
+    top: 31px;
+    left: 0;
+    right: 0;
+    background-color: $bg_third_light;
+    border: 2px solid $el_accent_high;
+    @include text-regular($color: $text_high_accent);
+    visibility: hidden;
+    overflow: hidden;
+    list-style: none;
+    border-radius: 4px;
+    z-index: 100;
+
+
+    &Show {
+      visibility: visible;
+    }
+
+    &Required {
+      border: 2px solid $red;
+    }
+  }
+
+  &Option {
+    padding: 8px 10px;
+    cursor: pointer;
+    user-select: none;   
+
+    &Selected {
+      background-color: $bg_second_light;
+    }
+
+    &:hover {
+      background-color: $bg_second_light;
+    }
+
+    &:focus {
+      background-color: $bg_second_light;
+    }
+  }
+}

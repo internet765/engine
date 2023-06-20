@@ -1,0 +1,15 @@
+@import '../../../../_variables.scss';
+@import '../../../../mixins.scss';
+
+.section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: $bg_third_light;
+  margin-left: 80px;
+  overflow: auto;
+
+  .title {
+    @include text-regular
+  }
+}

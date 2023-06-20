@@ -1,0 +1,135 @@
+@import '../../_variables.scss';
+@import '../../mixins.scss';
+
+.sidebar {
+    min-height: calc(100vh - 50px);
+    overflow: auto;
+    min-width: 80px;
+    background-color: $bg_second;
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: all .4s ease;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 90;
+
+    &:hover {
+      min-width: 300px;
+      .header {
+        .title {
+            opacity: 1;
+            width: 240px;
+          }
+      }
+      .tab {  
+        &Text {
+            opacity: 1;
+            min-width: 100%;
+            margin-left: 10px;
+        }
+      }
+     }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        min-height: 84px;
+
+        .title {
+            @include text-subtitle($color: $text_high_accent_light);
+            height: 24px;
+            width: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: all .4s ease;
+        }
+    }
+
+    .tabs {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    
+        li {
+            list-style-type: none;
+            display: flex;
+        }
+    }
+    
+    .tab {
+        display: flex;
+        align-items: center;
+        padding: 15px 30px;
+        @include text-regular($color: $text_low_accent_light);
+        text-decoration: none;
+        width: 100%;
+    
+        svg path {
+            fill: $icon_low_accent_light;
+        }
+
+        &Icon {
+            width: 20px;
+            height: 20px;
+          }
+    
+        &Text {
+            width: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: all .4s ease;
+        }
+    
+        &Active {
+            background: $bg_third;
+            color: $text_high_accent_light;
+            position: relative;
+    
+            svg path {
+                fill: $icon_high_accent_light;
+            }
+    
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                width: 6px;
+                background-color: $el_accent_high;
+            }
+        }
+    
+        &:hover {
+            background: $bg_third;
+            color: $text_high_accent_light;
+    
+            svg path {
+                fill: $icon_high_accent_light;
+            }
+        }
+
+        &Disabled {
+            background: $bg_second;
+            color: $text_disabled_light;
+            cursor: unset;
+
+            svg path {
+                fill: $icon_disabled_light;
+            }
+       
+            &:hover {
+             background: $bg_second;
+             color: $text_disabled_light;
+             cursor: unset;
+
+             svg path {
+                fill: $icon_disabled_light;
+            }
+            }
+          }
+    }
+}

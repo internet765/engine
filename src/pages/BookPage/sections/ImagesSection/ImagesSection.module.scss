@@ -1,0 +1,28 @@
+@import '../../../../_variables.scss';
+@import '../../../../mixins.scss';
+
+.section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: $bg_third_light;
+  margin-left: 80px;
+
+  &Alert {
+    @include text-regular($color: $text_low_accent);
+    width: 163px;
+    height: 34px;
+    text-align: center;
+  }
+
+  &Title {
+    @include text-regular
+  }
+
+  &Grid {
+    display: display;
+    flex-wrap: wrap;
+    margin: 0;
+    overflow: auto;
+  }
+}

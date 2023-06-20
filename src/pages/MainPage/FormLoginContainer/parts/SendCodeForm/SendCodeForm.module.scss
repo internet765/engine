@@ -1,0 +1,28 @@
+@import '../../../../../variables.scss';
+@import '../../../../../_mixins.scss';
+
+.recovery {
+    display: flex;
+    flex-direction: column;
+
+    &Title {
+        @include text-subtitle;
+        margin-bottom: 20px;
+    }
+  
+    &Alert {
+      margin-top: 5px;
+    }
+  
+    &Link {
+      margin-top: 10px;
+    }
+  
+    &Buttons {
+      display: flex;
+      flex-direction: row;
+      align-self: flex-end;
+      gap: 10px;
+      margin-top: 20px;
+    }
+  }

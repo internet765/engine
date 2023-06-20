@@ -1,0 +1,49 @@
+@import '../../../../../_variables.scss';
+@import '../../../../../mixins.scss';
+
+.loader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  gap: 15px;
+
+  svg path {
+    fill: $icon_high_accent;
+  }
+
+  &Input {
+    width: 200px;
+  }
+
+  &Icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+
+    &Top {
+      position: relative;
+      top: 7px;
+    }
+  }
+
+  &Modal {
+    display: flex;
+    flex-direction: column;
+
+    &ButtonsRoot {
+      display: flex;
+      flex-direction: row;
+      align-self: flex-end;
+      gap: 10px;
+    }
+  
+    &Text {
+      @include text-regular;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+
+

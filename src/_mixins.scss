@@ -1,0 +1,37 @@
+@import './_variables.scss';
+
+@mixin text-subtitle($font: $font, $size: $size-subtitle, $line-height: $line-height-subtitle, $color: $text_high_accent) {
+  font-family: $font;
+  font-style: $font-style;
+  font-weight: $subtitle-weight;
+  font-size: $size;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin text-bold($font: $font, $size: $size-bold, $line-height: $line-height-bold, $color: $text_high_accent) {
+  font-family: $font;
+  font-style: $font-style;
+  font-weight: $bold-weight;
+  font-size: $size;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin text-regular($font: $font, $size: $size-regular, $line-height: $line-height-regular, $color: $text_high_accent) {
+  font-family: $font;
+  font-style: $font-style;
+  font-weight: $regular-weight;
+  font-size: $size;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin text-small($font: $font, $size: $size-small, $line-height: $line-height-small, $color: $text_high_accent) {
+  font-family: $font;
+  font-style: $font-style;
+  font-weight: $small-weight;
+  font-size: $size;
+  line-height: $line-height;
+  color: $color;
+}

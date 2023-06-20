@@ -1,0 +1,41 @@
+@import '../../../../_variables.scss';
+@import '../../../../mixins.scss';
+
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px 30px;
+  margin: 0;
+  user-select: none;
+  @include text-regular;
+  border-bottom: 1px solid $bg_second_light;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $bg_second_light
+  }
+
+  &Name {
+    color: $text_high_accent;
+    width: 220px;
+  }
+
+  &Login {
+    color: $text_high_accent;
+    width: 225px;
+  }
+
+  &Role {
+    color: $text_low_accent;
+    width: 140px;
+  }
+
+  &Books {
+    color: $text_low_accent;
+  }
+
+  &Del {
+    margin-left: auto;
+  }
+}

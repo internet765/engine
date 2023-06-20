@@ -1,0 +1,38 @@
+@import '../../../_variables.scss';
+@import '../../../mixins.scss';
+
+.tabs {
+   display: flex;
+   flex-direction: row;
+
+   li {
+      list-style-type: none;
+      display: flex;
+   }
+}
+
+.tab {
+   padding: 16.5px 30px;
+   @include text-regular($color: $text_low_accent_light);
+   text-decoration: none; 
+
+   &Active {
+      background: $bg_third;
+      color: $text_high_accent_light;
+   } 
+
+   &:hover {
+      background: $bg_third;
+      color: $text_high_accent_light;
+   }
+
+   &Disabled {
+      color: $text_disabled_light;
+ 
+      &:hover {
+         background-color: $bg-first;
+       color: $text_disabled_light;
+      }
+    }
+}
+

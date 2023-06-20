@@ -1,0 +1,18 @@
+@import '../../../../../../_variables.scss';
+@import '../../../../../../mixins.scss';
+
+.item {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px;
+    border-right: 1px solid $bg_second_light;
+    border-bottom: 1px solid $bg_second_light;
+
+    &Image {
+        max-width: 300px;
+        height: 225px;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+}

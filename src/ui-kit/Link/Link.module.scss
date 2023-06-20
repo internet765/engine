@@ -1,0 +1,21 @@
+@import '../../_variables.scss';
+@import '../../_mixins.scss';
+
+.link {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+  text-decoration: none;
+  cursor: pointer;
+  @include text-small($color: $el_accent_high);
+
+  &:hover {
+    color: $el_accent_low;
+  }
+
+  &Disabled {
+    cursor: auto;
+    color: $text_disabled;
+    pointer-events: none;
+  }
+}

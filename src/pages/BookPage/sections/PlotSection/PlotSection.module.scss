@@ -1,0 +1,10 @@
+@import '../../../../_variables.scss';
+@import '../../../../mixins.scss';
+
+.section {
+  display: flex;
+  flex-direction: row;
+  background-color: $bg_third;
+  margin-left: 80px;
+  width: 100%;
+}

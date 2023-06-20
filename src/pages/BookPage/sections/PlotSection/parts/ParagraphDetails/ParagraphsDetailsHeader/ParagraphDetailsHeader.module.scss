@@ -1,0 +1,55 @@
+@import '../../../../../../../_variables.scss';
+@import '../../../../../../../mixins.scss';
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1px solid $bg_third_light;
+
+  &Modal {
+    display: flex;
+    flex-direction: column;
+
+    &ButtonsRoot {
+      display: flex;
+      flex-direction: row;
+      align-self: flex-end;
+      gap: 10px;
+    }
+  }
+
+  &ArrowL {
+    margin-right: 10px;
+  }
+
+  &Paragraph {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px 17px 20px;
+
+    &Number {
+      color: $text_low_accent;
+      margin-right: 10px;
+    }
+
+    &Name {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      margin-right: 10px;
+      max-width: 320px;
+    }
+
+    &Icons {
+      display: flex;
+      margin-left: auto;
+    }
+
+    &Save {
+      margin-right: 10px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import '../../../../../variables';
+@import '../../../../../mixins.scss';
+
+.plug {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  height: calc(100vh - 100px);
+
+  &Text {
+    @include text-regular($color: $text_low_accent);
+    width: 112px;
+    height: 34px;
+    text-align: center;
+  }
+}

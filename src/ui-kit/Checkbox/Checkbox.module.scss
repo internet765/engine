@@ -1,0 +1,56 @@
+@import '../../_variables.scss';
+@import '../../_mixins.scss';
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &Input {
+    position: absolute;
+    visibility: hidden;
+    width: 17px;
+    height: 17px;
+
+    &+label {
+      @include text-regular;
+      cursor: pointer;
+      user-select: none;
+      display: flex;
+      align-items: flex-end;
+      width: 100%;
+    }
+
+    &+label::before {
+      content: '';
+      display: inline-block;
+      width: 17px;
+      height: 17px;
+      border-radius: 1px;
+      border: 2px solid $el_accent_high;
+      background-repeat: no-repeat;
+      background-position: center center;
+      margin-right: 5px;
+    }
+
+    &:checked+label::before {
+      background-image: url("data:image/svg+xml,%3Csvg width='11' height='9' viewBox='0 0 11 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4.5L1.94737 3.5L4.31579 6L9.05263 1L10 2L4.31579 8L1 4.5Z' fill='%230090D6' stroke='%230090D6'/%3E%3C/svg%3E%0A");
+    }
+
+    &:hover+label::before {
+      border: 2px solid $el_accent_low;
+    }
+
+    &:disabled+label {
+      @include text-regular($color: $text_disabled);
+    }
+
+    &:disabled+label::before {
+      background-image: url("data:image/svg+xml,%3Csvg width='11' height='9' viewBox='0 0 11 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4.5L1.94737 3.5L4.31579 6L9.05263 1L10 2L4.31579 8L1 4.5Z' fill='%2393DCFF' stroke='%2393DCFF'/%3E%3C/svg%3E%0A");
+      border: 2px solid $el_accent_disabled;
+    }
+
+
+
+  }
+}

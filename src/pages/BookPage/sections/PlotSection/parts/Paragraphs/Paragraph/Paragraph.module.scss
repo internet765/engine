@@ -1,0 +1,36 @@
+@import '../../../../../../../_variables.scss';
+@import '../../../../../../../mixins.scss';
+
+.paragraph {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1px;
+    cursor: pointer;
+    @include text-regular;
+    padding: 16px 20px 17px 20px;
+    background-color: $bg_second_light;
+
+    svg path {
+        fill: $red;
+    }
+
+    &Number {
+        color: $text_low_accent;
+        margin-right: 10px;
+    }
+
+    &Name {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        margin-right: 10px;
+    }
+
+    &Alert {
+        width: 16px;
+        height: 16px;
+        margin-left: auto;
+    }
+}

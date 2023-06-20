@@ -1,0 +1,28 @@
+@import '../../_variables.scss';
+@import '../../_mixins.scss';
+
+
+.root {
+  display: flex;
+  flex-direction: column;
+  @include text-regular;
+  position: relative;
+
+  label {
+    @include text-small($color: $text_low_accent);
+    margin-bottom: 2px;
+  }
+
+  .textarea {
+    padding: 10px;
+    border: 2px solid $el_accent_high;
+    @include text-regular($color: $text_high_accent);
+    border-radius: 4px;
+    resize: none;
+
+    &:focus {
+      border: 2px solid $el_accent_low;
+      outline: none;
+    }
+  }
+}

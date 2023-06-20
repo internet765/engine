@@ -1,0 +1,14 @@
+@import '../../../../_variables.scss';
+@import '../../../../mixins.scss';
+
+.header {
+  background-color: $bg_first_light;
+  justify-content: space-between;
+  align-items: center;
+  padding: 17px 30px;
+  margin: 0;
+
+  &Title {
+    @include text-regular
+  }
+}

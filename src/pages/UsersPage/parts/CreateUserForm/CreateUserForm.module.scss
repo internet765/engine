@@ -1,0 +1,53 @@
+@import '../../../../_variables.scss';
+@import '../../../../mixins.scss';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &Input {
+    width: 200px;
+  }
+
+  &Select {
+    width: 200px;
+  }
+
+  &Textarea {
+    width: 361px;
+    height: 83px;
+  }
+
+  &Books {
+    width: 361px;
+
+    &Disabled {
+      display: none;
+    }
+
+    &Title {
+      @include text-small($color: $text_low_accent);
+      margin-bottom: 2px;
+    }
+
+    &Container {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      border: 2px solid $el_accent_high;
+      border-radius: 4px;
+      gap: 15px;
+      height: 130px;
+      overflow-y: auto;
+    }
+  }
+
+  &Buttons {
+    display: flex;
+    align-self: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+}

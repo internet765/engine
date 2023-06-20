@@ -1,0 +1,92 @@
+@import '../../_variables.scss';
+@import '../../_mixins.scss';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  @include text-regular;
+  position: relative;
+
+  label {
+    @include text-small($color: $text_low_accent);
+    margin-bottom: 2px;
+  }
+
+  .input {
+    background: $bg_third_light;
+    border: 2px solid $el_accent_high;
+    @include text-regular($color: $text_high_accent);
+    border-radius: 4px;
+    height: 33px;
+    padding: 8px 10px;
+    cursor: auto;
+    position: relative;
+    z-index: 10;
+
+    &Password {
+      padding: 8px 35px 8px 10px;
+    }
+
+    &[type="number"]::-webkit-outer-spin-button,
+    &[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    &[type="number"] {
+      -moz-appearance: textfield;
+    }
+
+    &[type="number"]:hover,
+    &[type="number"]:focus {
+      -moz-appearance: number-input;
+    }
+
+    &[type=number]::-webkit-inner-spin-button,
+    &[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    &:focus {
+      border: 2px solid $el_accent_low;
+      outline: none;
+    }
+
+    &:invalid {
+      border: 2px solid $red;
+    }
+
+    &:hover:invalid {
+      border: 2px solid $red_hover;
+    }
+
+    &:focus::placeholder {
+      opacity: 0;
+    }
+
+    &:hover {
+      border: 2px solid $el_accent_low;
+    }
+
+    &:disabled {
+      border: 2px solid $el_accent_disabled;
+      @include text-regular($color: $text_disabled);
+      cursor: unset;
+    }
+
+    &:disabled::placeholder {
+      color: $text_disabled;
+    }
+
+    &Invalid {
+      border: 2px solid $red;
+
+      &:hover,
+      &:focus {
+        border: 2px solid $red_hover;
+      }
+
+    }
+  }
+}

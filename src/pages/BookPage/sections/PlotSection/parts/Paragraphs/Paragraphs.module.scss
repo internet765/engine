@@ -1,0 +1,26 @@
+@import '../../../../../../_variables.scss';
+@import '../../../../../../mixins.scss';
+
+.paragraphs {
+    background-color: $bg_third_light;
+    box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.25);
+    width: 270px;
+    min-height: calc(100vh - 50px);
+    @include text-regular;
+    position: relative;
+    overflow: auto;
+
+    &RootTitle {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+        padding: 16px 20px 17px 20px;
+        cursor: pointer;
+    }
+
+    &AddIcon {
+        display: flex;
+        align-items: center;
+    }
+}

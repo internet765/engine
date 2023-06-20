@@ -1,0 +1,9 @@
+@import '../../../../../_variables.scss';
+@import '../../../../../mixins.scss';
+
+.container {
+    display: flex;
+    background: $bg_first_light;
+    padding: 17px 30px 16px 30px;
+    width: 100%;
+}

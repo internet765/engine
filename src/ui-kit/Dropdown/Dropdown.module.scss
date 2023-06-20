@@ -1,0 +1,39 @@
+@import '../../_variables.scss';
+@import '../../_mixins.scss';
+
+.dropdown {
+  background-color: $bg_third_light;
+  @include text-regular;
+
+  &Header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 30px;
+      cursor: pointer;
+      border-top: 1px solid $bg_second_light;
+
+
+      &Control {
+       width: 20px;
+       height: 20px;
+       cursor: pointer;
+
+       svg path {
+           fill: $icon_low_accent
+       }
+      }
+  }
+
+  &Content {
+    overflow: hidden;
+    transition: all .6s ease;
+    max-height: 0;
+    padding: 0 30px 0 30px;
+
+    &Active {
+     max-height: 999px;
+     padding-bottom: 15px;
+    }
+  }
+}

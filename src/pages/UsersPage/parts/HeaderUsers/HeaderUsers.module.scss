@@ -1,0 +1,88 @@
+@import '../../../../_variables.scss';
+@import '../../../../mixins.scss';
+
+.header {
+  background-color: $bg_first_light;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 30px;
+  margin: 0;
+
+  &Title {
+    @include text-regular
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &Inputs {
+    display: flex;
+    align-items: center;
+  }
+
+  &Input {
+    width: 200px;
+    margin-left: 30px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &Select {
+    width: 200px;
+  }
+
+  &Icon {
+    position: relative;
+    top: 6px;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+
+    svg path {
+      fill: $icon_high_accent;
+    }
+  }
+
+  &Books {
+
+     &Title {
+      @include text-regular;
+      margin-bottom: 20px;
+     }
+     &Container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-height: 177px;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+       
+      &::-webkit-scrollbar-track {
+        background-color: $bg_second_light;
+        border-radius: 10px;
+        margin: 5px;
+      }
+       
+      &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: $el_accent_disabled;
+      }
+     }
+  }
+
+  &Buttons {
+    display: flex;
+    align-self: flex-end;
+    gap: 10px;
+  }
+
+}

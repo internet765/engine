@@ -1,0 +1,42 @@
+@import '../../_variables.scss';
+@import '../../_mixins.scss';
+
+.icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 2px;
+
+    svg path {
+        fill: $icon_high_accent;
+    }
+
+    &:hover {
+        background-color: $el_accent_bg;
+    }
+
+    &Disabled {
+        cursor: auto;
+
+        &:hover {
+            background-color: inherit;
+        }
+
+        svg path {
+            fill: $icon_disabled;
+        }
+
+    }
+
+    &Active {
+
+        &:hover {
+            background-color: $el_accent_bg;
+        }
+
+        svg path {
+            fill: $el_accent_high;
+        }
+
+    }
+}

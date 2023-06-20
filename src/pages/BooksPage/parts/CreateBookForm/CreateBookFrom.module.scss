@@ -1,0 +1,48 @@
+@import '../../../../_variables.scss';
+@import '../../../../mixins.scss';
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &Image {
+    position: relative;
+    width: 300px;
+    height: 225px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  &Image img {
+    width: 300px;
+    height: 225px;
+    object-fit: cover;
+  }
+
+  &Image input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 225px;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &Inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 200px;
+  }
+
+  &Buttons {
+    display: flex;
+    align-self: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+}

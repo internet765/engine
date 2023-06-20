@@ -1,0 +1,51 @@
+@import 'normalize.css';
+@import './_variables.scss';
+@import './vendor/index.scss';
+
+html,
+body {
+  font-family: $font, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: $subtitle-document;
+  font-size: $size-document;
+  line-height: $line-height-document;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+svg path {
+  fill: $icon_high_accent_light;
+}
+
+*,
+*::before,
+*::after,
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 1440px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: $el_accent_disabled;
+
+  &:hover {
+    background-color: $el_accent_low;
+  }
+}

@@ -1,0 +1,23 @@
+@import '../../_variables.scss';
+@import '../../mixins.scss';
+
+.page {
+    background-color: $bg_third;
+    min-height: calc(100vh - 50px);
+    max-height: 100%;
+
+    &Container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    &Image {
+        margin-bottom: 30px;
+    }
+
+    &Error {
+        @include text-bold($size: 73.1429px, $line-height: 87px, $color: $text_high_accent_light)
+    }
+}

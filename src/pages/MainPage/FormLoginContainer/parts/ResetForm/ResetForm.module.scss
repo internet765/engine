@@ -1,0 +1,50 @@
+@import '../../../../../variables.scss';
+@import '../../../../../_mixins.scss';
+
+.recovery {
+  display: flex;
+  flex-direction: column;
+
+  &Title {
+    @include text-subtitle;
+    margin-bottom: 20px;
+  }
+
+  &Subtitle {
+    @include text-regular;
+    margin-bottom: 10px;
+  }
+
+  &Timer {
+    display: flex;
+    gap: 7px;
+    margin-bottom: 20px;
+  }
+
+  &Count {
+    width: 30px;
+  }
+
+  &InputCode{
+    margin-bottom: 20px;
+  }
+
+  &Inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 224px;
+  }
+
+  &Alert {
+    margin-top: 5px;
+  }
+
+  &Buttons {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+  }
+}

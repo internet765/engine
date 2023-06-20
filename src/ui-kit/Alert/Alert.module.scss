@@ -1,0 +1,22 @@
+@import '../../_variables.scss';
+@import '../../_mixins.scss';
+
+.alert {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    svg path {
+        fill: $red
+    }
+
+    &Text {
+        @include text-regular($color: $red);
+        margin-left: 7px;
+
+        &Small {
+            @include text-small($color: $red);
+            // max-width: 180px;
+        }
+    }
+}

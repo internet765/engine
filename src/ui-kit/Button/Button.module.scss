@@ -1,0 +1,47 @@
+@import '../../_variables.scss';
+@import '../../_mixins.scss';
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include text-regular($color: $text_high_accent_light);
+  background-color: $el_accent_high;
+  color: $text_high_accent_light;
+  border: 2px solid $el_accent_high;
+  cursor: pointer;
+  min-width: 90px;
+  min-height: 33px;
+  border-radius: 4px;
+  padding: 6px 18px;
+  outline: none;
+  width: fit-content;
+
+    &:hover {
+      background-color: $el_accent_low;
+      border-color: $el_accent_low;
+    }
+
+    &:disabled {
+      background-color: $el_accent_disabled;
+      border-color: $el_accent_disabled;
+      cursor:auto;
+    }
+
+    &White {
+      background-color: $bg_third_light;
+      color: $text_high_accent;
+
+      &:hover {
+        background-color: $bg_third_light;
+        border-color: $el_accent_low;
+      }
+
+      &:disabled {
+        background-color: $bg_third_light;
+        border-color: $el_accent_disabled;
+        color: $text_disabled;
+        cursor: not-allowed;
+      }
+    }
+}
