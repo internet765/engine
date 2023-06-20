@@ -9,8 +9,3 @@ Cделано:
 - налажена работу с беком, загрузка и выгрузка картинок и текстового контента
 
 Использовано HTML, SCSS, CSS modules, classnames, react-hook-form, React, Reduxtoolkit, React-router, Axios
-
-Тестовый доступ к проекту:
-http://quest-engine.ru
-логин aleks-webby@yandex.ru
-пароль 123456789
